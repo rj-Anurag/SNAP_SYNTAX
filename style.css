@@ -1,6 +1,160 @@
-.container {
-  width: 100%;
-  margin: 0 auto;
-  padding: 0 20px;
-  overflow: hidden;
-}
+/* Reset & Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  html, body {
+    height: 100%;
+    overflow-x: hidden;
+    font-family: Arial, sans-serif;
+    scroll-behavior: smooth;
+  }
+  .menu-navbar {
+    display: flex;
+    justify-content: space-between; /* spreads left + center */
+    align-items: center;
+    padding: 20px;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    z-index: 10;
+ 
+  }
+  
+  .nav-item-1{
+    padding-right: 10rem;
+    font-weight: 400; /* light-bold */
+    font-size: 28px;
+    color: #333;
+
+  }
+  /* Left group wrapper */
+  .left-items {
+    display: flex;
+    gap: 5rem; /* space between the items */
+  }
+  
+  /* Style for each left nav item */
+  .left-items .nav-item {
+    font-weight: 400; /* light-bold */
+    font-size: 28px;
+    color: #333;
+  }
+  
+  /* Center item styling */
+  .center-item {
+    position: absolute; /* absolute center in the navbar */
+    left: 50%;
+    transform: translateX(-50%);
+    
+    font-weight: 300; /* light */
+    font-size: 40px;  /* larger */
+    color: #b6b6b6;
+  }
+  
+  .third-section {
+    position: relative;
+    height: 200vh; /* makes the section tall to enable scrolling */
+    width: 100%;
+    display: block; /* stops flex from aligning things horizontally */
+    padding: 100px 0; /* adds space at the top */
+
+  }
+  
+  /* Fixed h1 on the top-left corner */
+  .third {
+    position: fixed;
+    top: 100px; /* distance from top */
+    left: 10px; /* distance from left */
+    font-size: 28px;
+    font-weight: 600;
+    color: #333;
+    z-index: 10;
+  }
+  
+  /* Fixed 'View All Works' link on top-right */
+  .third-a {
+    position: fixed;
+    top: 100px; /* same vertical alignment as h1 */
+    right: 100px; /* distance from right */
+    font-size: 18px;
+    text-decoration: none;
+    color: #007bff;
+    font-weight: 500;
+    border: 1px solid #007bff;
+    padding: 10px 20px;
+    border-radius: 4px;
+    z-index: 10;
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+  
+ 
+  
+  .third-p {
+    max-width: 600px;
+    text-align: center;
+    font-size: 18px;
+    color: #555;
+    margin: 0 auto;
+    position: relative;
+    z-index: 1;
+  }
+  
+  /* Scroll container */
+  .scroll-container {
+    position: relative;
+    width: 100%;
+    scroll-snap-type: y mandatory;
+  }
+  
+  /* Sticky background sections */
+  .color-section {
+    position: sticky;
+    top: 0;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  
+    /* Smooth transition for color fade between layers */
+    transition: background-color 0.5s ease;
+  }
+  
+  /* Card Styles */
+  .card {
+    width: 70%;
+    height: 70%;
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+  }
+  
+  .card:hover {
+    transform: scale(1.05);
+  }
+  
+  .video-placeholder {
+    width: 100%;
+    height: 100%;
+    background-color: #000;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
+  }
+  
+  .last-section {
+    width: 100%;
+    padding: 20px;
+    background-color: #f8f9fa;
+    text-align: center;
+  }
+  
